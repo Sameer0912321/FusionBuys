@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp | FusionBuys</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section>
+            <div id="outer">
+                <div class="inner">
+                    <h1>FusionBuys!</h1>
+                    <p>FusionBuys offers a unique blend of traditional and modern fashion, catering to all styles and occasions. Discover high-quality, affordable clothing that elevates your wardrobe. Shop with us for exceptional service and a delightful shopping experience.</p>
+                </div>
+                <div class="inner">
+                    <form>
+                        <h2>SignUp</h2>
+                        <label for="name">Enter Your Name </label>
+                        <input type="text" name="name" id="name" placeholder="Here...">
+                        <label for="phoneNo">Enter Your Phone Number Or E-mail </label>
+                        <input type="text" name="email" id="email" placeholder="Here...">
+                        <label for="phoneNo">Create A Password </label>
+                        <input type="password" name="password" id="password" placeholder="Here...">
+                        <label for="password2">Re-Enter Your Password </label>
+                        <input type="password" name="password2" id="password2" placeholder="Here...">                        
+                        <button type="button" onclick="validation()">LogIn</button>
+                        <div id="errorouter" style="display:none;">
+                            <img src="./assets/icons8-wrong-50 (1).png" alt="wrong">
+                            <p id="error"></p>
+                        </div>
+                        <hr>
+                        <p>Already Have An Account? <a href="index.html">Sign In</a></p>
+                    </form>   
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="signup.js"></script>    
+</body>
+</html>
