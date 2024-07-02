@@ -18,11 +18,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js	"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script> -->
     <!-- bootstrap -->
+     <!-- jquery -->
 </head>
 <body>
     <header>
         <marquee><span>Free shipping above €60 | Free 30-day returns</span><span>Free shipping above €60 | Free 30-day returns</span><span>Free shipping above €60 | Free 30-day returns</span><span>Free shipping above €60 | Free 30-day returns</span><span>Free shipping above €60 | Free 30-day returns</span> </marquee>
-        <nav>
+        <nav id="nav">
             <h2>Fusion Buys</h2>
             <div id="nav-one">
                 <ul>
@@ -30,18 +31,57 @@
                     <li>Gucci Shoes</li>
                     <li>Men's Wear</li>
                     <li>Women's Wear</li>
-                    <li>Contact</li>
                 </ul>
+                
             </div>
             <div id="nav-two">
+                
                 <ul>
-                    <li><img src="./assets/icons8-search-30 (1).png" alt=""></li>
-                    <li><img src="./assets/icons8-cart-30.png" alt=""></li>
+                    <li><img id="searchicon" src="./assets/icons8-search-30 (1).png" alt=""></li>
+                    <div id="cart">
+                        <li><img src="./assets/icons8-cart-30.png" alt=""></li>
+                        <div id="nocart">0</div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <nav id="res">
+            <h2>Fusion Buys</h2>
+            <div id="nav-one">
+                <ul>
+                    <li>Shop All</li>
+                    <li>Gucci Shoes</li>
+                    <li>Men's Wear</li>
+                    <li>Women's Wear</li>
+                </ul>
+                
+            </div>
+            <div id="nav-two">
+                
+                <ul>
+                    <li><img id="searchicon" src="./assets/icons8-search-30 (1).png" alt=""></li>
+                    <div id="cart2">
+                        <li><img src="./assets/icons8-cart-30.png" alt=""></li>
+                        <div id="nocart2">0</div>
+                    </div>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
+        <div id="respnav">
+            <ul>
+                <li>Shop All</li>
+                <li>Gucci Shoes</li>
+                <li>Men's Wear</li>
+                <li>Women's Wear</li>
+            </ul>
+        </div>
+        <div id="loader">
+            <div class="load" id="load1"></div>
+            <div class="load" id="load2"></div>
+            <div class="load" id="load3"></div>
+        </div>
         <section id="hero">
             <div id="overlay"></div>
            <div id="outerhero">
@@ -58,41 +98,6 @@
                     <p id="description">Description</p>
                     <p id="price"><b> 100$</b> <del>123$</del></p>
                     <button>Add To Cart</button>
-                </div>
-                <div class="inner">
-                    <img src="./assets/pexels-zainulhaq-13562801.jpg" alt="product" id="img">
-                    <p id="title">Title</p>
-                    <p id="description">Description</p>
-                    <p id="price"><b> 100$</b> <del>123$</del></p>
-                    <button>Add To Cart</button>
-                </div>
-                <div class="inner">
-                    <img src="./assets/pexels-zainulhaq-13562801.jpg" alt="product" id="img">
-                    <p id="title">Title</p>
-                    <p id="description">Description</p>
-                    <p id="price"><b> 100$</b> <del>123$</del></p>
-                    <button>Add To Cart</button>
-                </div>
-                <div class="inner">
-                    <img src="./assets/pexels-zainulhaq-13562801.jpg" alt="product" id="img">
-                    <p id="title">Title</p>
-                    <p id="description">Description</p>
-                    <p id="price"><b> 100$</b> <del>123$</del></p>
-                    <button>Add To Cart</button>
-                </div>
-                <div class="inner">
-                    <img src="./assets/pexels-zainulhaq-13562801.jpg" alt="product" id="img">
-                    <p id="title">Title</p>
-                    <p id="description">Description</p>
-                    <p id="price"><b> 100$</b> <del>123$</del></p>
-                    <button>Add To Cart</button>
-                </div>
-                 <div class="inner">
-                    <img src="./assets/pexels-zainulhaq-13562801.jpg" alt="product" id="img">
-                    <p id="title">Title</p>
-                    <p id="description">Description</p>
-                    <p id="price"><b> 100$</b> <del>123$</del></p>
-                    <button>Add To Cart</button>
                 </div> -->
                
            </div>
@@ -101,15 +106,62 @@
            </div>
         </section>
         <section id="third">
-            <div id="gallery">
-                <div class="pic1"></div>
-                <div class="pic2"></div>
-                <div class="pic3"></div>
-                <div class="pic4"></div>
-            </div>
+           <div id="outergallery">
+                <div class="innergallery">
+                    <div id="gallery">
+                        <div class="pic1"></div>
+                        <div class="pic2"></div>
+                        <div class="pic3"></div>
+                        <div class="pic4"></div>
+                    </div>
+                </div>
+                <div class="innergallery">
+                    <h2>Why Choose FusionBuys?</h2>
+                    <ol>
+                        <li>At FusionBuys, quality is our top priority. We source our clothing from reputable brands and designers to ensure that every piece meets our high standards of craftsmanship and durability.</li>
+                        <li>Stay ahead of the fashion curve with our constantly updated collection. Our team of fashion experts meticulously selects the latest trends and timeless classics to keep your wardrobe fresh and stylish.</li>
+                        <li>Our user-friendly website design makes it easy to browse and find your desired items. Plus, with our secure payment gateway, you can shop with confidence knowing that your personal and financial information is protected.</li>
+                    </ol>
+                </div>
+           </div>
         </section>
+        <footer>
+            <div id="outerfooter">
+                <div class="innerfooter1 ">
+                    <h2>FusionBuys</h2>
+                    <p>You’ll only receive the essentials: product releases, exclusive promotions, and what makes us tick — no more, no less. Right now, new subscribers get a gift when purchasing a Carbonator 3.</p>
+                </div>
+                <div class="innerfooter2">
+                    <table>
+                        <tr>
+                            <th>Support</th>
+                            <th>Explore FusionBuys</th>
+                            <th>Follow Us</th>
+                        </tr>
+                        <tr>
+                            <td>Product Support</td>
+                            <td>FusionBuys Gifts</td>
+                            <td>Instagram</td>
+                        </tr>
+                        <tr>
+                            <td>Brands</td>
+                            <td>About US</td>
+                            <td>Twitter</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </footer>
         
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+    $("#res").click(function(){
+        $("#respnav").slideToggle()
+    });
+});
+    </script>
     <script src="dashboard.js"></script>
 </body>
 </html>
